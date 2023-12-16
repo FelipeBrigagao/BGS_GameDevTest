@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9119852588116697620, guid: 3e4f8fefed6f21b4a96bb9e118ca9a6e, type: 3}
       propertyPath: m_Name
-      value: InventoryUiShopSell
+      value: InventoryUiCustomer
       objectReference: {fileID: 0}
     - target: {fileID: 9119852588116697621, guid: 3e4f8fefed6f21b4a96bb9e118ca9a6e, type: 3}
       propertyPath: m_Pivot.x

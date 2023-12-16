@@ -6,7 +6,7 @@ public class InventorySlotPlayer : InventorySlotBase
 {
     private InventoryUiPlayer _inventoryUiPlayer;
 
-    public override void SetInventoryReference(InventoryUIBase iUIbase)
+    public override void SetInventoryUIReference(InventoryUIBase iUIbase)
     {
         _inventoryUiPlayer = (InventoryUiPlayer) iUIbase;
     }

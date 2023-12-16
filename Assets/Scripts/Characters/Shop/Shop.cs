@@ -8,12 +8,14 @@ public class Shop : MonoBehaviour, IInteractable
     [Header("References")]
     [SerializeField] private ShopSO _shopInfo;
     [SerializeField] private InventoryBase _shopInventory;
-    [SerializeField] private GameObject _shopUi;
-    [SerializeField] private InventoryUiShop _buyUi;
-    [SerializeField] private InventoryUiShop _sellUi;
+    [SerializeField] private GameObject _shopUiParent;
+    [SerializeField] private InventoryUiShop _shopUi;
+    [SerializeField] private InventoryUiShop _customerUi;
     [SerializeField] private TextMeshProUGUI _shopNameTxt;
 
-    private InventoryBase _clientInventory;
+    private InventoryBase _customerInventory;
+
+    public InventoryBase CustomerInventory => _customerInventory;
 
     private void Start()
     {
@@ -31,24 +33,22 @@ public class Shop : MonoBehaviour, IInteractable
             _shopInventory.AddItens(item);
         }
 
-        _buyUi.SetInventory(_shopInventory);
-        _sellUi.SetOtherInventory(_shopInventory);
+        _shopUi.SetInventory(_shopInventory);
     }
 
     public void Interact(GameObject interactor)
     {
         if (UiManager.Instance.AnInventoryIsOpen) return;
 
-        interactor.TryGetComponent<InventoryBase>(out _clientInventory);
-        _sellUi.SetInventory(_clientInventory);
-        _buyUi.SetOtherInventory(_clientInventory);
-        _shopUi.SetActive(true);
+        interactor.TryGetComponent<InventoryBase>(out _customerInventory);
+        _customerUi.SetInventory(_customerInventory);
+        _shopUiParent.SetActive(true);
         UiManager.Instance.ShopInventoryOpen();
     }
 
     public void CloseShopUI()
     {
-        _shopUi.SetActive(false);
+        _shopUiParent.SetActive(false);
         UiManager.Instance.ShopInventoryClose();
     }
 }

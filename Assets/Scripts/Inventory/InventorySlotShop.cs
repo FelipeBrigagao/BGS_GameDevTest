@@ -10,14 +10,16 @@ public class InventorySlotShop : InventorySlotBase
     [SerializeReference] private TextMeshProUGUI _priceTagUi; 
 
     [Header("Parameters")]
-    [SerializeField] private bool _buy;
-    [SerializeField] private bool _sell;
-    [SerializeField] private Color _enoughtMoneyColor;
-    [SerializeField] private Color _notEnoughtMoneyColor;
+    [SerializeField] private Color _enoughMoneyColor;
+    [SerializeField] private Color _notEnoughMoneyColor;
 
     private InventoryUiShop _uiShop;
+    
+    public delegate bool CheckPrice(int price);
 
-    public override void SetInventoryReference(InventoryUIBase iUIbase)
+    public CheckPrice _checkPrice;
+
+    public override void SetInventoryUIReference(InventoryUIBase iUIbase)
     {
         _uiShop = (InventoryUiShop)iUIbase;
     }
@@ -25,68 +27,50 @@ public class InventorySlotShop : InventorySlotBase
     public override void AddItem(ItemSO item)
     {
         base.AddItem(item);
-
-        if (_sell || _uiShop.ClientInventory == null) return;
-
-
-        _priceTagUi.enabled = true;
-
-        _priceTagUi.text = $"${item.price}";
-
-        if (item.price <= _uiShop.ClientInventory.Currency.CurrentMoney)
-        {
-            _priceTagUi.color = _enoughtMoneyColor;
-
-        }
-        else if (item.price > _uiShop.ClientInventory.Currency.CurrentMoney)
-        {
-            _priceTagUi.color = _notEnoughtMoneyColor;
-
-        }
+        
+        _checkPrice = _uiShop.CheckPrice;
+       UpdatePrice();
     }
 
     public override void RemoveItem()
     {
         base.RemoveItem();
 
-        if (_sell || _uiShop.ClientInventory == null) return;
-
+        _checkPrice = null;
         _priceTagUi.enabled = false;
-
         _priceTagUi.text = "";
     }
 
+    public void UpdatePrice()
+    {
+        if (_checkPrice == null) return;
+        
+        _priceTagUi.enabled = true;
+
+        _priceTagUi.text = $"${_item.price}";
+
+        if (_uiShop.IsCustomer || (_uiShop.IsShop && _checkPrice(_item.price)))
+            _priceTagUi.color = _enoughMoneyColor;
+        else if (_uiShop.IsShop && !_checkPrice(_item.price))
+        {
+            _priceTagUi.color = _notEnoughMoneyColor;
+        }
+    }
 
     public override void Use()
     {
         if(_item == null) return;
 
-        if (_buy)
-            Buy();
-
-        if (_sell)
-            Sell();
-    }
-
-    private void Buy()
-    {
-        if (_uiShop.ClientInventory.Currency.RemoveMoney(_item.price))
-        {
-            ItemSO item = _item;
-
-            _uiShop.Inventory.Remove(item);
-            _uiShop.ClientInventory.AddItens(item);
-            //could add the money to the shops currency
-        }
+        Sell();
     }
 
     private void Sell()
     {
+        if (!_checkPrice(_item.price))
+            return;
+        
         ItemSO item = _item;
-
-        _uiShop.Inventory.Currency.AddMoney(item.price);
-
-        _uiShop.Inventory.Remove(item);
-        _uiShop.ClientInventory.AddItens(item);
+        
+        
     }
 }

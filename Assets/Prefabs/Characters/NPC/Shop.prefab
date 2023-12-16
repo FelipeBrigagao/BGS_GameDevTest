@@ -232,9 +232,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shopInfo: {fileID: 11400000, guid: 9c800afa0c9c04d49ac3f961a97b7701, type: 2}
   _shopInventory: {fileID: 2629858215956965135}
-  _shopUi: {fileID: 2629858217198101906}
-  _buyUi: {fileID: 154143152666535222}
-  _sellUi: {fileID: 7283936786567117697}
+  _shopUiParent: {fileID: 2629858217198101906}
+  _shopUi: {fileID: 154143152666535222}
+  _customerUi: {fileID: 7283936786567117697}
   _shopNameTxt: {fileID: 4358028314061428683}
 --- !u!114 &2629858215956965135
 MonoBehaviour:
@@ -326,7 +326,7 @@ SortingGroup:
   m_GameObject: {fileID: 2629858216246177052}
   m_Enabled: 1
   m_SortingLayerID: -1424280773
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!1 &2629858216599676938
 GameObject:
@@ -431,7 +431,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1424280773
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 5084661014962647745, guid: 2f90eb840bd0cf4438d49759bc08d718, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

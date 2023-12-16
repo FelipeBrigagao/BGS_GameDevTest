@@ -25,7 +25,7 @@ public class InventorySlotBase : MonoBehaviour
         _icon.sprite = null;
     }
 
-    public virtual void SetInventoryReference(InventoryUIBase iUIbase)
+    public virtual void SetInventoryUIReference(InventoryUIBase iUIbase)
     {
         _inventoryUI = iUIbase;
     }

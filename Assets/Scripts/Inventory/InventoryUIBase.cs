@@ -75,7 +75,7 @@ public class InventoryUIBase : MonoBehaviour
         {
             newSlot = Instantiate(_slotPrefab, _slotsHolder);
             _slots.Add(newSlot);
-            newSlot.SetInventoryReference(this);
+            newSlot.SetInventoryUIReference(this);
         }
 
         UpdateSlots();
@@ -85,7 +85,7 @@ public class InventoryUIBase : MonoBehaviour
     {
         foreach(InventorySlotBase slot in _slots)
         {
-            slot.SetInventoryReference(this);
+            slot.SetInventoryUIReference(this);
         }
     }
 

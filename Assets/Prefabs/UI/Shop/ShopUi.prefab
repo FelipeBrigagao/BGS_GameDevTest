@@ -363,7 +363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 838345668536891141, guid: 8a63705e7f6a09d47abc6cec70688451, type: 3}
       propertyPath: m_Name
-      value: InventoryUiShopBuy
+      value: InventoryUiShop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a63705e7f6a09d47abc6cec70688451, type: 3}
@@ -381,7 +381,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4326495516115893562, guid: f340b13d036b9b44eb00a295155a0a7c, type: 3}
       propertyPath: m_Name
-      value: InventoryUiShopSell
+      value: InventoryUiCustomer
       objectReference: {fileID: 0}
     - target: {fileID: 4326495516115893563, guid: f340b13d036b9b44eb00a295155a0a7c, type: 3}
       propertyPath: m_Pivot.x

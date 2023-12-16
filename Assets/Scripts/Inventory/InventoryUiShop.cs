@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class InventoryUiShop : InventoryUIBase
 {
-    private InventoryBase _clientInventory;
+    [SerializeField] private bool _isShop;
+    [SerializeField] private bool _isCustomer;
 
-    public InventoryBase ClientInventory { get => _clientInventory;}
+    private InventoryBase _otherInventory;
+    
+    public bool IsShop => _isShop;
+    public bool IsCustomer => _isCustomer;
+    public InventoryBase OtherInventory => _otherInventory;
 
-    public void SetOtherInventory(InventoryBase otherInventory)
+    
+    public void SetOther(InventoryBase otherInventory)
     {
-        _clientInventory = otherInventory;
-        UpdateSlots();
+        _otherInventory = otherInventory;
+    }
+
+    public bool CheckPrice(int value)
+    {
+        if (_otherInventory.Currency.CurrentMoney < value)
+            return false;
+
+        return true;
     }
 }
