@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9ee4b0abaa35a4789c68e9d6821da3, type: 3}
+  m_Name: NakedHead
+  m_EditorClassIdentifier: 
+  name: NakedHead
+  icon: {fileID: 21300000, guid: 0e6407347fc834e6a8b46f9528bcf7b3, type: 3}
+  price: 0
+  itemType: 0
+  ClothesPart: 1
+  ClipsInfo:
+  - AnimationState: 0
+    AnimationDirection: 1
+    AnimationClip: {fileID: 7400000, guid: 279f5b7827e2e3642bea18fcfb41ea2e, type: 2}
+  - AnimationState: 0
+    AnimationDirection: 2
+    AnimationClip: {fileID: 7400000, guid: a2504e81d5d2ced44b05ef1713a9eb68, type: 2}
+  - AnimationState: 0
+    AnimationDirection: 3
+    AnimationClip: {fileID: 7400000, guid: 4fe2aacde9ce8aa4c9bc1c88ab6daf69, type: 2}
+  - AnimationState: 0
+    AnimationDirection: 0
+    AnimationClip: {fileID: 7400000, guid: ed7eb73ea3a666948b453f3acd2a3475, type: 2}
+  - AnimationState: 1
+    AnimationDirection: 1
+    AnimationClip: {fileID: 7400000, guid: 43b1ed03c4826064fba4365207108221, type: 2}
+  - AnimationState: 1
+    AnimationDirection: 2
+    AnimationClip: {fileID: 7400000, guid: fc9d6620743dc04409da749cfed67df4, type: 2}
+  - AnimationState: 1
+    AnimationDirection: 3
+    AnimationClip: {fileID: 7400000, guid: 4d2d9c4f2a99c994c8d14ab51912f046, type: 2}
+  - AnimationState: 1
+    AnimationDirection: 0
+    AnimationClip: {fileID: 7400000, guid: 881c8e2f30c8c754681229af26f5fadf, type: 2}
+  IsBase: 1

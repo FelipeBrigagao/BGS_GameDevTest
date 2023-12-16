@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9c39a021b62114780bf7f293b0cbfd, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  InitialMoney: 10
+  MaxInventorySlots: 20
+  BaseBodyClothes: {fileID: 11400000, guid: 33b8dc6214f1f8e4693f98af3edcdf20, type: 2}
+  BaseHeadClothes: {fileID: 11400000, guid: 3914ffc0776a3c848831ccd8b9560e3a, type: 2}
+  BaseTorsoClothes: {fileID: 11400000, guid: d96cf738a87aed041af88d7663e3792b, type: 2}
+  BaseLegsClothes: {fileID: 11400000, guid: 3e29d024717161440995d0860ee141b6, type: 2}

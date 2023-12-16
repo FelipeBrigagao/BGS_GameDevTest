@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9ee4b0abaa35a4789c68e9d6821da3, type: 3}
+  m_Name: RedCap
+  m_EditorClassIdentifier: 
+  name: RedCap
+  icon: {fileID: 555975709, guid: 1d11f313ee72f8c42bc99d1895baf459, type: 3}
+  price: 3
+  itemType: 0
+  ClothesPart: 1
+  ClipsInfo:
+  - AnimationState: 0
+    AnimationDirection: 1
+    AnimationClip: {fileID: 7400000, guid: a0d5bfa13b2b6b7429cb7b18f32be173, type: 2}
+  - AnimationState: 0
+    AnimationDirection: 2
+    AnimationClip: {fileID: 7400000, guid: 84cdaa95355c09e4e90db296e34f5973, type: 2}
+  - AnimationState: 0
+    AnimationDirection: 3
+    AnimationClip: {fileID: 7400000, guid: 3ad9f40faf08b8447b5e6e130c3afb2d, type: 2}
+  - AnimationState: 0
+    AnimationDirection: 0
+    AnimationClip: {fileID: 7400000, guid: 35a9c0763a440bb41818bd890a5db3fa, type: 2}
+  - AnimationState: 1
+    AnimationDirection: 1
+    AnimationClip: {fileID: 7400000, guid: b7ffee0e93df3f04bbd1a27c37b8e18f, type: 2}
+  - AnimationState: 1
+    AnimationDirection: 2
+    AnimationClip: {fileID: 7400000, guid: 256f397d58fec5c4fa8e4bd65473eac6, type: 2}
+  - AnimationState: 1
+    AnimationDirection: 3
+    AnimationClip: {fileID: 7400000, guid: 92913062ade014f4eb85da0cbf89c60b, type: 2}
+  - AnimationState: 1
+    AnimationDirection: 0
+    AnimationClip: {fileID: 7400000, guid: 21a0d66b351c3eb41979397771bc69cc, type: 2}
+  IsBase: 0
