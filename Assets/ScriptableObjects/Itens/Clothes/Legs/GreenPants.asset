@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b9ee4b0abaa35a4789c68e9d6821da3, type: 3}
   m_Name: GreenPants
   m_EditorClassIdentifier: 
-  name: GreenPants
-  icon: {fileID: 1812229292, guid: a1932d01bee32594ba65afe143a268bb, type: 3}
+  name: Green Pants
+  icon: {fileID: -1353002657, guid: a1932d01bee32594ba65afe143a268bb, type: 3}
   price: 7
   itemType: 0
   ClothesPart: 3

@@ -463,6 +463,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: RedCap_Icon
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 61
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cae0818b9060d14991550e9e00aa1fb
+      internalID: -396583201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -486,6 +507,7 @@ TextureImporter:
       RedCap_Right_1: -608200005
       RedCap_Left_1: -1623792947
       RedCap_Left_3: 1050616347
+      RedCap_Icon: -396583201
       RedCap_Up_2: -442436015
       RedCap_Down_3: -2066774117
       RedCap_Up_1: 426935762

@@ -463,6 +463,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BlueShirt_Icon
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 53
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a9a63f4ba37d3449fcc4ddf5f5267d
+      internalID: 1365742291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -486,6 +507,7 @@ TextureImporter:
       BlueShirt_Down_0: 1385813167
       BlueShirt_Up_2: -753904237
       BlueShirt_Left_3: -1546810694
+      BlueShirt_Icon: 1365742291
       BlueShirt_Right_1: 1146237446
       BlueShirt_Down_2: 766261721
       BlueShirt_Right_2: -161269198

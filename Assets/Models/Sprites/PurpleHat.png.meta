@@ -463,6 +463,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: PurpleHat_Icon
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 65
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad0865442c5c9a4b8c689b22f20a1f5
+      internalID: -27269901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -488,6 +509,7 @@ TextureImporter:
       PurpleHat_Right_2: 647301428
       PurpleHat_Up_1: 665153484
       PurpleHat_Down_3: -1447870634
+      PurpleHat_Icon: -27269901
       PurpleHat_Down_1: -1223731185
       PurpleHat_Up_0: -778934113
   spritePackingTag: 

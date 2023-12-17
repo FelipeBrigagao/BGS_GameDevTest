@@ -463,6 +463,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: GreenPants_Icon
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 51
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211b688a6a1b43f4fad536a180c48191
+      internalID: -1353002657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -484,6 +505,7 @@ TextureImporter:
       GreenPants_Left_1: -1345188721
       GreenPants_Down_3: -1486941074
       GreenPants_Right_0: 1704838952
+      GreenPants_Icon: -1353002657
       GreenPants_Up_1: 1861935812
       GreenPants_Down_0: 1812229292
       GreenPants_Up_0: 980592560

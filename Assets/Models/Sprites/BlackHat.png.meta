@@ -463,6 +463,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BlackHat_Icon
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 61
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6551eab3d46f10489800c3a928ddbc0
+      internalID: 737718445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -486,6 +507,7 @@ TextureImporter:
       BlackHat_Down_0: -2010056293
       BlackHat_Down_3: 1650206293
       BlackHat_Right_0: -381224203
+      BlackHat_Icon: 737718445
       BlackHat_Right_1: -1030818046
       BlackHat_Up_0: -835009791
       BlackHat_Right_3: -1053684766

@@ -9,7 +9,7 @@ public class StandInteractable : MonoBehaviour, IInteractable
     [SerializeField] private ShopSO _standInfo;
     [SerializeField] private InventoryBase _standInventory;
     [SerializeField] private InventoryUiShop _standInventoryUI;
-    [SerializeField] private GameObject _standUIHolder;
+    [SerializeField] private GameObject _standUIParent;
     [SerializeField] private TextMeshProUGUI _shopNameTxt;
     [SerializeField] private SpriteRenderer _clothUI;
 
@@ -36,7 +36,7 @@ public class StandInteractable : MonoBehaviour, IInteractable
         
         interactor.TryGetComponent<InventoryBase>(out _customerInventory);
         _standInventoryUI.SetOther(_customerInventory);
-        _standUIHolder.SetActive(true);
+        _standUIParent.SetActive(true);
         UiManager.Instance.ShopInventoryOpen();
     }
 
@@ -61,10 +61,17 @@ public class StandInteractable : MonoBehaviour, IInteractable
     {
         CheckIfInteractable();
         _standInventoryUI.OnItemSold -= ItemSold;
+        CloseStandUI();
     }
 
     private void ChangeClothUI(Sprite cloth)
     {
         _clothUI.sprite = cloth;
+    }
+    
+    public void CloseStandUI()
+    {
+        _standUIParent.SetActive(false);
+        UiManager.Instance.ShopInventoryClose();
     }
 }

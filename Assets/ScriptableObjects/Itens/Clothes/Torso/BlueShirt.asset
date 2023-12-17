@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b9ee4b0abaa35a4789c68e9d6821da3, type: 3}
   m_Name: BlueShirt
   m_EditorClassIdentifier: 
-  name: BlueShirt
-  icon: {fileID: 1385813167, guid: 953699df9a2a4094fa814d0cd0176407, type: 3}
+  name: Blue Shirt
+  icon: {fileID: 1365742291, guid: 953699df9a2a4094fa814d0cd0176407, type: 3}
   price: 5
   itemType: 0
   ClothesPart: 2
