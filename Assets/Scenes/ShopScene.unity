@@ -8616,6 +8616,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stand
       objectReference: {fileID: 0}
+    - target: {fileID: 4519138939105657735, guid: ecbb5c187d602274884a2fccf24b318b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5927233422517877350, guid: ecbb5c187d602274884a2fccf24b318b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -8659,6 +8663,10 @@ PrefabInstance:
     - target: {fileID: 5927233422517877350, guid: ecbb5c187d602274884a2fccf24b318b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234263688997683047, guid: ecbb5c187d602274884a2fccf24b318b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecbb5c187d602274884a2fccf24b318b, type: 3}

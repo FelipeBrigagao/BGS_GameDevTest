@@ -19,7 +19,6 @@ public class InventoryUiShop : InventoryUIBase
         OnItemSold?.Invoke();
     }
     
-
     public void SetOther(InventoryBase otherInventory)
     {
         _otherInventory = otherInventory;

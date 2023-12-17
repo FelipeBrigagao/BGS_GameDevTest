@@ -9,10 +9,13 @@ public class StandInteractable : MonoBehaviour, IInteractable
     [SerializeField] private ShopSO _standInfo;
     [SerializeField] private InventoryBase _standInventory;
     [SerializeField] private InventoryUiShop _standInventoryUI;
+    [SerializeField] private GameObject _standUIHolder;
     [SerializeField] private TextMeshProUGUI _shopNameTxt;
     [SerializeField] private SpriteRenderer _clothUI;
 
     private InventoryBase _customerInventory;
+    
+    public bool isInteractable { get; set; }
     
     private void Start()
     {
@@ -29,23 +32,39 @@ public class StandInteractable : MonoBehaviour, IInteractable
 
     public void Interact(GameObject interactor)
     {
+        if (UiManager.Instance.AnInventoryIsOpen) return;
         
+        interactor.TryGetComponent<InventoryBase>(out _customerInventory);
+        _standInventoryUI.SetOther(_customerInventory);
+        _standUIHolder.SetActive(true);
+        UiManager.Instance.ShopInventoryOpen();
     }
 
-    public bool isInteractable { get; set; }
     
     public void CheckIfInteractable()
     {
         if (_standInventory.Itens.Count > 0)
+        {
             isInteractable = true;
+            ChangeClothUI(_standInventory.Itens[0].icon);
+            _shopNameTxt.text = _standInventory.Itens[0].name;
+        }
         else
+        {
             isInteractable = false;
+            ChangeClothUI(null);
+            _shopNameTxt.text = "";
+        }
     }
 
     private void ItemSold()
     {
         CheckIfInteractable();
-        _clothUI.sprite = null;
         _standInventoryUI.OnItemSold -= ItemSold;
+    }
+
+    private void ChangeClothUI(Sprite cloth)
+    {
+        _clothUI.sprite = cloth;
     }
 }

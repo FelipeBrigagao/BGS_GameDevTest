@@ -43,11 +43,7 @@ public class InventorySlotShop : InventorySlotBase
 
     public void UpdatePrice()
     {
-        if (CheckPriceDelegate == null)
-        {
-            Debug.Log("Aqui");
-            return;
-        }
+        if (CheckPriceDelegate == null) return;
         
         _priceTagUi.enabled = true;
 
