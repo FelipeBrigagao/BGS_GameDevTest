@@ -474,7 +474,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adce48edbb655554abc8b9aa67cf775f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currencyUi: {fileID: 3213608056099118792}
+  OnCurrencyChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3213608056099118792}
+        m_TargetAssemblyTypeName: CurrencyUi, Assembly-CSharp
+        m_MethodName: UpdateMoneyTXT
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1679440558347119946
 GameObject:
   m_ObjectHideFlags: 0

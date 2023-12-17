@@ -17,7 +17,7 @@ public class InventorySlotShop : InventorySlotBase
     
     public delegate bool CheckPrice(int price);
 
-    public CheckPrice _checkPrice;
+    public CheckPrice CheckPriceDelegate;
 
     public override void SetInventoryUIReference(InventoryUIBase iUIbase)
     {
@@ -28,30 +28,34 @@ public class InventorySlotShop : InventorySlotBase
     {
         base.AddItem(item);
         
-        _checkPrice = _uiShop.CheckPrice;
-       UpdatePrice();
+        CheckPriceDelegate = _uiShop.CheckPrice;
+        UpdatePrice();
     }
 
     public override void RemoveItem()
     {
         base.RemoveItem();
 
-        _checkPrice = null;
+        CheckPriceDelegate = null;
         _priceTagUi.enabled = false;
         _priceTagUi.text = "";
     }
 
     public void UpdatePrice()
     {
-        if (_checkPrice == null) return;
+        if (CheckPriceDelegate == null)
+        {
+            Debug.Log("Aqui");
+            return;
+        }
         
         _priceTagUi.enabled = true;
 
         _priceTagUi.text = $"${_item.price}";
 
-        if (_uiShop.IsCustomer || (_uiShop.IsShop && _checkPrice(_item.price)))
+        if (_uiShop.IsCustomer || (_uiShop.IsShop && CheckPriceDelegate(_item.price)))
             _priceTagUi.color = _enoughMoneyColor;
-        else if (_uiShop.IsShop && !_checkPrice(_item.price))
+        else if (_uiShop.IsShop && !CheckPriceDelegate(_item.price))
         {
             _priceTagUi.color = _notEnoughMoneyColor;
         }
@@ -66,11 +70,11 @@ public class InventorySlotShop : InventorySlotBase
 
     private void Sell()
     {
-        if (!_checkPrice(_item.price))
+        if (!CheckPriceDelegate(_item.price))
             return;
         
         ItemSO item = _item;
         
-        
+        _uiShop.ItemSold(item);
     }
 }

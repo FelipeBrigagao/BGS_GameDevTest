@@ -262,7 +262,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adce48edbb655554abc8b9aa67cf775f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currencyUi: {fileID: 0}
+  OnCurrencyChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2629858216246177052
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,8 +327,8 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2629858216246177052}
   m_Enabled: 1
-  m_SortingLayerID: -1424280773
-  m_SortingLayer: 0
+  m_SortingLayerID: -237064553
+  m_SortingLayer: 2
   m_SortingOrder: 0
 --- !u!1 &2629858216599676938
 GameObject:

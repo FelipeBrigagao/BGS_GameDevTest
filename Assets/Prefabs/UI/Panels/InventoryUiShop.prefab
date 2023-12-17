@@ -118,6 +118,8 @@ MonoBehaviour:
   _slotPrefab: {fileID: 8007591621620219670, guid: 532d0172864ad224ca3b5f096a96e2b4, type: 3}
   _panelNameTxt: {fileID: 3387301879672544444}
   _panelName: Buy
+  _isShop: 1
+  _isCustomer: 0
 --- !u!224 &838345669010864484 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9119852588590607477, guid: 3e4f8fefed6f21b4a96bb9e118ca9a6e, type: 3}

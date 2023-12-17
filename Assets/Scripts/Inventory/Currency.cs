@@ -2,20 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Currency : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] private CurrencyUi _currencyUi;
     private int _currentMoney;
 
     public int CurrentMoney { get => _currentMoney;}
 
+    public UnityEvent<int> OnCurrencyChange;
 
     public void SetInicialMoney(int initialMoney)
     {
         _currentMoney = initialMoney;
-        _currencyUi?.UpdateMoneyTXT(_currentMoney);
+        OnCurrencyChange?.Invoke(_currentMoney);
     }
 
 
@@ -27,13 +27,13 @@ public class Currency : MonoBehaviour
         }
 
         _currentMoney -= money;
-        _currencyUi?.UpdateMoneyTXT(_currentMoney);
+        OnCurrencyChange?.Invoke(_currentMoney);
         return true;
     }
 
     public void AddMoney(int money)
     {
         _currentMoney += money;
-        _currencyUi?.UpdateMoneyTXT(_currentMoney);
+        OnCurrencyChange?.Invoke(_currentMoney);
     }
 }

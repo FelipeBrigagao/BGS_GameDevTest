@@ -126,9 +126,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slotsHolder: {fileID: 4326495516715758427}
-  _slotPrefab: {fileID: 8395499191448749788, guid: 03ac3ca5b94008d4f92259980c36605e, type: 3}
+  _slotPrefab: {fileID: 8007591621620219670, guid: 532d0172864ad224ca3b5f096a96e2b4, type: 3}
   _panelNameTxt: {fileID: 1777434568730449539}
   _panelName: Sell
+  _isShop: 0
+  _isCustomer: 1
 --- !u!224 &4326495516715758427 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9119852588590607477, guid: 3e4f8fefed6f21b4a96bb9e118ca9a6e, type: 3}

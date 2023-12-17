@@ -42,6 +42,8 @@ public class Shop : MonoBehaviour, IInteractable
 
         interactor.TryGetComponent<InventoryBase>(out _customerInventory);
         _customerUi.SetInventory(_customerInventory);
+        _customerUi.SetOther(_shopInventory);
+        _shopUi.SetOther(_customerInventory);
         _shopUiParent.SetActive(true);
         UiManager.Instance.ShopInventoryOpen();
     }

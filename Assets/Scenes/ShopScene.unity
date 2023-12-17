@@ -8366,18 +8366,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shop
       objectReference: {fileID: 0}
-    - target: {fileID: 2629858216246177054, guid: 3cf4b7871bf96ae429c3324321dbfa75, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2629858216246177054, guid: 3cf4b7871bf96ae429c3324321dbfa75, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -237064553
-      objectReference: {fileID: 0}
-    - target: {fileID: 2629858217198101906, guid: 3cf4b7871bf96ae429c3324321dbfa75, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cf4b7871bf96ae429c3324321dbfa75, type: 3}
 --- !u!1001 &4483146770028243705
