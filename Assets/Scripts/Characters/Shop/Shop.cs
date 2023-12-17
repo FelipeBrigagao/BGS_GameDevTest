@@ -17,6 +17,9 @@ public class Shop : MonoBehaviour, IInteractable
 
     public InventoryBase CustomerInventory => _customerInventory;
 
+    public bool isInteractable { get; set; }
+    
+
     private void Start()
     {
         Init();
@@ -34,6 +37,7 @@ public class Shop : MonoBehaviour, IInteractable
         }
 
         _shopUi.SetInventory(_shopInventory);
+        CheckIfInteractable();
     }
 
     public void Interact(GameObject interactor)
@@ -47,10 +51,21 @@ public class Shop : MonoBehaviour, IInteractable
         _shopUiParent.SetActive(true);
         UiManager.Instance.ShopInventoryOpen();
     }
+    
+    public void CheckIfInteractable()
+    {
+        if (_shopInventory.Itens.Count > 0 || _shopInventory.Currency.CurrentMoney > 0)
+            isInteractable = true;
+        else
+            isInteractable = false;
+    }
 
     public void CloseShopUI()
     {
         _shopUiParent.SetActive(false);
         UiManager.Instance.ShopInventoryClose();
     }
+    
+    
+    
 }

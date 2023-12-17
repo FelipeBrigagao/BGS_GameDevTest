@@ -49,23 +49,23 @@ public class PlayerAction : MonoBehaviour
         {   
             if(interactableCollider.TryGetComponent<IInteractable>(out IInteractable interactable))
             {
+                if(!interactable.isInteractable) continue;
+                
                 if(_closestInteractable != null)
                 {
                     if((interactable.gameObject.transform.position - this.transform.position).magnitude < (_closestInteractable.gameObject.transform.position - this.transform.position).magnitude)
                     {
                         _closestInteractable = interactable;
-                        _player.PlayerUI.PositionInteractButton(_closestInteractable.gameObject);
+                        _player.PlayerUI.PositionInteractButton(_closestInteractable.gameObject.transform);
                     }
                 }
                 else
                 {
                     _closestInteractable = interactable;
-                    _player.PlayerUI.PositionInteractButton(_closestInteractable.gameObject);
+                    _player.PlayerUI.PositionInteractButton(_closestInteractable.gameObject.transform);
                 }
             }
         }
-
-
     }
 
     public void StartDoingActions()

@@ -7,16 +7,13 @@ public class PlayerUI : MonoBehaviour
     [Header("References")]
     [SerializeField] private Player _player;
     [SerializeField] private Transform _interactionButtonHolder;
-    [SerializeField] private Transform _interactionButton;
+    [SerializeField] private InteractionButton _interactionButton;
     [SerializeField] private InventoryUiPlayer _inventoryUiPlayer;
     [SerializeField] private GameObject _inventoryUi;
 
     [Header("Uis References")]
     [SerializeField] private GameObject _inventoryButton;
     [SerializeField] private CurrencyUi _currencyUi;
-
-    [Header("Parameters")]
-    [SerializeField] private Vector3 _interactButtonOffset;
 
     private void OnEnable()
     {
@@ -40,11 +37,12 @@ public class PlayerUI : MonoBehaviour
         }
     }
 
-    public void PositionInteractButton(GameObject positionObject)
+    public void PositionInteractButton(Transform positionObject)
     {
-        TurnInteractionButtonON();
-        _interactionButton.SetParent(positionObject.transform);
-        _interactionButton.localPosition = _interactButtonOffset;
+        if(!_interactionButton.gameObject.activeInHierarchy)
+            TurnInteractionButtonON();
+    
+        _interactionButton.SetPosition(positionObject);
     }
 
     public void TurnInteractionButtonON()
@@ -55,7 +53,7 @@ public class PlayerUI : MonoBehaviour
     public void TurnInteractionButtonOFF()
     {
         _interactionButton.gameObject.SetActive(false);
-        _interactionButton.SetParent(_interactionButtonHolder);
+        _interactionButton.SetPosition(_interactionButtonHolder);
     }
 
     public void InitInventoryUiPlayer(InventoryBase inventory)
