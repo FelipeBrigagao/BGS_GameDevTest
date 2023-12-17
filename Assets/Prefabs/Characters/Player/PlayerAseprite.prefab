@@ -455,9 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currency: {fileID: 7037114801514687587}
-  _itens:
-  - {fileID: 11400000, guid: 38a771f57df980f428d5c6c6619c3c55, type: 2}
-  - {fileID: 11400000, guid: 2bb063767af13f5419e30ca7205ffbfc, type: 2}
+  _itens: []
 --- !u!114 &7037114801514687587
 MonoBehaviour:
   m_ObjectHideFlags: 0

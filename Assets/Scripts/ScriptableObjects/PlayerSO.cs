@@ -7,6 +7,7 @@ public class PlayerSO : ScriptableObject
 {
     public int InitialMoney;
     public int MaxInventorySlots;
+    public List<ItemSO> InitialItens;
 
     public ClothesSO BaseBodyClothes;
     public ClothesSO BaseHeadClothes;

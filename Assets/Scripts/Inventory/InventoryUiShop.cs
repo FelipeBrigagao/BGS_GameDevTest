@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -9,9 +10,15 @@ public class InventoryUiShop : InventoryUIBase
     [SerializeField] private bool _isCustomer;
 
     private InventoryBase _otherInventory;
-    
     public bool IsShop => _isShop;
     public bool IsCustomer => _isCustomer;
+
+    public event Action OnItemSold;
+    public void ItemWasSold()
+    {
+        OnItemSold?.Invoke();
+    }
+    
 
     public void SetOther(InventoryBase otherInventory)
     {
@@ -38,6 +45,7 @@ public class InventoryUiShop : InventoryUIBase
             _inventory.Currency.AddMoney(itemSold.price);
             _inventory.Remove(itemSold);   
             _otherInventory.ItemChanged();
+            ItemWasSold();
         }
     }
 }

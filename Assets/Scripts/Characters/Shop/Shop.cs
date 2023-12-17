@@ -28,13 +28,7 @@ public class Shop : MonoBehaviour, IInteractable
     public void Init()
     {
         _shopNameTxt.text = _shopInfo.ShopName;
-        _shopInventory.SetMaxSlots(_shopInfo.MaxSlots);
-        _shopInventory.Currency.SetInicialMoney(_shopInfo.InitialMoney);
-        
-        foreach(ItemSO item in _shopInfo.Items)
-        {
-            _shopInventory.AddItens(item);
-        }
+        _shopInventory.Init(_shopInfo.MaxSlots, _shopInfo.InitialMoney, _shopInfo.Items);
 
         _shopUi.SetInventory(_shopInventory);
         CheckIfInteractable();

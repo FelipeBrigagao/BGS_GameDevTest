@@ -62,8 +62,7 @@ public class Player : MonoBehaviour
         _playerInventory = GetComponent<InventoryBase>();
 
         _playerEquip.InitPlayerClothes();
-        _playerInventory.SetMaxSlots(_playerSO.MaxInventorySlots);
-        _playerInventory.Currency.SetInicialMoney(_playerSO.InitialMoney);
+        _playerInventory.Init(_playerSO.MaxInventorySlots, _playerSO.InitialMoney, _playerSO.InitialItens);
         _playerUI.InitInventoryUiPlayer(_playerInventory);
 
         StartPlayer();

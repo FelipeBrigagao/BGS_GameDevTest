@@ -21,6 +21,21 @@ public class InventoryBase : MonoBehaviour
         OnItemChange?.Invoke();
     }
 
+    public void Init(int maxSlots, int initialCurrency, List<ItemSO> itens = null)
+    {
+        SetMaxSlots(maxSlots);
+        _currency.SetInicialMoney(initialCurrency);
+
+        if (itens != null)
+        {
+            foreach(ItemSO item in itens)
+            {
+                AddItens(item);
+            }
+        }
+        
+    }
+    
 
     public bool AddItens(ItemSO item)
     {

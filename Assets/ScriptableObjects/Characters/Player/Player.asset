@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialMoney: 10
   MaxInventorySlots: 20
+  InitialItens:
+  - {fileID: 11400000, guid: 38a771f57df980f428d5c6c6619c3c55, type: 2}
+  - {fileID: 11400000, guid: beb564c00a0a0df4fbee8936e4169f29, type: 2}
   BaseBodyClothes: {fileID: 11400000, guid: 33b8dc6214f1f8e4693f98af3edcdf20, type: 2}
   BaseHeadClothes: {fileID: 11400000, guid: 3914ffc0776a3c848831ccd8b9560e3a, type: 2}
   BaseTorsoClothes: {fileID: 11400000, guid: d96cf738a87aed041af88d7663e3792b, type: 2}
