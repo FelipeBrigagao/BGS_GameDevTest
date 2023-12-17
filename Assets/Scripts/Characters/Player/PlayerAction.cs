@@ -25,7 +25,6 @@ public class PlayerAction : MonoBehaviour
     {
         if(_closestInteractable != null)
         {
-            Debug.Log("Interacting");
             _closestInteractable.Interact(gameObject);
         }
     }
