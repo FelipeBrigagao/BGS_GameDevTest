@@ -8,10 +8,6 @@ public class PlayerEquip : MonoBehaviour
     [Header("References")]
     [SerializeField] private Player _player;
 
-    [SerializeField] private ClothesSO _testHeadClothes;
-    [SerializeField] private ClothesSO _testTorsoClothes;
-    [SerializeField] private ClothesSO _testLegsClothes;
-
     private ClothesSO _currentBodyClothes;
     private ClothesSO _currentHeadClothes;
     private ClothesSO _currentTorsoClothes;
@@ -36,17 +32,6 @@ public class PlayerEquip : MonoBehaviour
         SwitchClothes(_player.PlayerSO.BaseTorsoClothes);
         SwitchClothes(_player.PlayerSO.BaseLegsClothes);
     }
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            SwitchClothes(_testHeadClothes);
-            SwitchClothes(_testTorsoClothes);
-            SwitchClothes(_testLegsClothes);
-        }
-    }
-
 
     public void ChangePiece(ItemSO newItem)
     {

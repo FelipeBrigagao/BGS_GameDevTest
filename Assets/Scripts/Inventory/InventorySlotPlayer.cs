@@ -22,7 +22,6 @@ public class InventorySlotPlayer : InventorySlotBase
     {
         ItemSO item = _item;
 
-        _inventoryUiPlayer.PlayerEquip.ChangePiece(item);
-        _inventoryUiPlayer.Inventory.Remove(item);
+        _inventoryUiPlayer.EquipItem(_item);
     }
 }

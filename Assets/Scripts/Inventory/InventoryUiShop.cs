@@ -32,9 +32,12 @@ public class InventoryUiShop : InventoryUIBase
 
     public void ItemSold(ItemSO itemSold)
     {
-        _otherInventory.Currency.RemoveMoney(itemSold.price);
-        _inventory.Currency.AddMoney(itemSold.price);
-        _otherInventory.AddItens(itemSold);
-        _inventory.Remove(itemSold);
+        if (_otherInventory.AddItens(itemSold))
+        {
+            _otherInventory.Currency.RemoveMoney(itemSold.price);
+            _inventory.Currency.AddMoney(itemSold.price);
+            _inventory.Remove(itemSold);   
+            _otherInventory.ItemChanged();
+        }
     }
 }
