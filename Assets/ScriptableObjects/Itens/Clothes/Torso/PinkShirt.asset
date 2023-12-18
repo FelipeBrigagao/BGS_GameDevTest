@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9ee4b0abaa35a4789c68e9d6821da3, type: 3}
+  m_Name: PinkShirt
+  m_EditorClassIdentifier: 
+  name: Pink Shirt
+  icon: {fileID: -404327475, guid: 094dde20a5482f54a91f235d3f1e0730, type: 3}
+  price: 5
+  itemType: 0
+  ClothesPart: 2
+  ClipsInfo:
+  - AnimationState: 0
+    AnimationDirection: 1
+    AnimationClip: {fileID: 7400000, guid: d3f8e277b69d1f2479f28a4deeb53a16, type: 2}
+  - AnimationState: 0
+    AnimationDirection: 2
+    AnimationClip: {fileID: 7400000, guid: 62f2d6a572edb3648a5e64478e86ebd1, type: 2}
+  - AnimationState: 0
+    AnimationDirection: 3
+    AnimationClip: {fileID: 7400000, guid: 26a2ce481cbe3ef41a0b38302cb65f7a, type: 2}
+  - AnimationState: 0
+    AnimationDirection: 0
+    AnimationClip: {fileID: 7400000, guid: ae7a3305e1dfc444db4f1dab1ec3993f, type: 2}
+  - AnimationState: 1
+    AnimationDirection: 1
+    AnimationClip: {fileID: 7400000, guid: 8c8626cee9372ca4dadb5c35ff021dee, type: 2}
+  - AnimationState: 1
+    AnimationDirection: 2
+    AnimationClip: {fileID: 7400000, guid: 7b3ce59f749c4ba45bd84213d3e10712, type: 2}
+  - AnimationState: 1
+    AnimationDirection: 3
+    AnimationClip: {fileID: 7400000, guid: 3ec7deec98eb0f2419c89845224bd6e7, type: 2}
+  - AnimationState: 1
+    AnimationDirection: 0
+    AnimationClip: {fileID: 7400000, guid: 5e51e48a545413149a47b96e98444510, type: 2}
+  IsBase: 0
